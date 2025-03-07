@@ -1,0 +1,383 @@
+@font-face {
+    font-family: 'inline';
+    src: url('fonts/inline.ttf');
+}
+
+@font-face {
+    font-family: 'opti';
+    src: url('fonts/opticivet.ttf');
+}
+
+body {
+    margin: 0;
+    background-color: #143432;
+    font-family: 'opti';
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    background-image: url(images/heroImages/ptera.png);
+    background-size: cover;
+    background-position: center;
+
+    width: 100vw;
+    height: 550px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0 0 50px 50px;
+}
+
+.hero-div {
+    display: flex;
+    width: 80vw;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: 30px;
+}
+
+.div {
+    height: 300px;
+    width: 550px;
+}
+
+.title {
+    display: flex;
+    height: 100px;
+    width: 550px;
+}
+
+.title .img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.title img {
+    margin: auto;
+    height: 90px;
+    width: 90px;
+    align-self: center;
+}
+
+.title .text {
+    width: 450px;
+    height: 100px;
+    font-size: 100px;
+    color: white;
+    font-family: 'inline';
+
+}
+
+/* HERO BODY */
+.title .text p {
+    line-height: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.body p {
+    font-family: 'opti';
+    color: white;
+    margin: 10px 20px 20px 20px;
+    font-size: 28px;
+}
+
+
+/* HERO BOTTOM */
+.more-info {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.more-info .join-btn {
+    background-color: none;
+
+    border: 3px solid white;
+    border-radius: 20px;
+
+    padding: 5px 20px 3px;
+
+    font-size: x-large;
+
+}
+
+.more-info a {
+    color: white;
+    text-decoration: none;
+
+    font-family: 'opti';
+    font-size: x-large;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 900px;
+    justify-content: space-evenly;
+
+}
+
+.card {
+    display: flex;
+    width: 800px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .img {
+    width: 375px;
+    height: 300px;
+}
+
+.card .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    width: 375px;
+
+}
+
+.card img {
+    height: 250px;
+}
+
+.card p {
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.card h2 {
+    font-size: 1.8em;
+    margin: 0;
+    text-shadow: 0 0 10px rgb(255, 255, 255, 0.4);
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+}
+
+.cta div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+}
+
+
+.reverse {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.cta h1 {
+    margin: 0;
+}
+
+.cta a {
+    text-align: center;
+    font-size: 32px;
+    color: #143432;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.footer {
+    background-color: #122222;
+    width: 100vw;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 5px;
+    color: rgb(255, 255, 255, 0.3);
+}
+
+.footer-links {
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.3);
+}
+
+.footer-links:hover {
+    color: rgb(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 1200px) {
+    .hero-div {
+        flex-direction: column;
+    }
+
+    .body {
+        text-align: center;
+    }
+
+    .hero {
+        height: 850px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 700px;
+        justify-content: space-evenly;
+
+    }
+
+    .card {
+        display: flex;
+        width: 90vw;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .card .img,
+    .card .text {
+        width: 225px;
+        height: 200px;
+    }
+
+    .card .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .card p {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+        margin: 0;
+        text-shadow: 0 0 10px rgb(255, 255, 255, 0.4);
+    }
+}
+
+@media screen and (max-width:650px) {
+    .hero .div {
+        width: 90vw;
+    }
+
+    .title {
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title p {
+        margin: 0;
+
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .chatViewerContainer,
+    .learn-more,
+    .title .img {
+        display: none;
+    }
+
+    .cards {
+        height: 1000px;
+        padding: 20px;
+    }
+
+    .card {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card .text,
+    .card .img {
+        width: 80vw;
+        text-align: center;
+    }
+
+    .card .text {
+        height: 130px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .div {
+        height: 400px;
+    }
+
+    .hero {
+        height: 550px;
+    }
+
+    .hero .title .text {
+        font-size: 5em;
+    }
+
+    .hero .title {
+        height: 5em;
+    }
+
+    .card .text {
+        width: 90vw;
+        height: 130px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    .card h2 {
+        /* padding-top: 3px; */
+        font-size: 28px;
+    }
+
+    .cards {
+        height: 1100px;
+    }
+}

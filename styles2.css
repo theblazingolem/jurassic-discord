@@ -1,0 +1,213 @@
+@font-face {
+    font-family: ggSans;
+    src: url(fonts/ggsans.ttf);
+}
+
+:root {
+    /* --primary-color: #5865f3;
+    --primary-color-light: #808aff;
+    --primary-color-background: #414bba; */
+    /* --font-color-light: #bbb;
+    /* --font-color-light2: #999; */
+    /* --font-color: #000; */
+    /* --background: #fff; */
+    /* --background-light: #eee; */
+    /* --background-shadow: #ddd; */
+    /* --background-light2: #ccc; */
+    /* --background-light3: #bbb; */
+    /* --theme-inversion: 1; */
+    --shadow-color: rgba(127, 127, 127, 0.5);
+    --shadow-color-dark: rgba(50, 50, 50, 0.5);
+    /* --default-button-text-color: #fff; */
+    /* 
+    color: var(--font-color);
+    font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+    font-size: min(1.25em, calc(100vw / 25));
+}
+
+.chatViewerContainer {
+    max-width: 100%;
+}
+
+.chatViewer {
+    border-radius: 30px;
+    display: flex;
+    color: white;
+    font-family: ggSans;
+    box-shadow: 0 0.5em 1em 0 rgba(50, 50, 50, 0.5);
+    transition: all 0.2s ease;
+    width: 40ch;
+    max-width: 100%;
+}
+
+.chatLeft {
+    padding: 1em 0;
+    border-radius: 20px 0 0 20px;
+}
+
+.chatRight {
+    padding: 1em 1em 0.25em 1em;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.2s ease;
+    flex-grow: 1;
+}
+
+.chatLabels {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    transform: translateX(-20px) translateY(1em);
+}
+
+.chatLabels>* {
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    box-shadow: 0 0.125em 0.25em 0 rgba(50, 50, 50, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: all 0.2s ease;
+}
+
+.chatLabels>*:hover {
+    cursor: pointer;
+    transform: scale(1.1) translateX(-5px);
+}
+
+.chatLabelIcon {
+    width: 1em;
+}
+
+.chatMessageBox {
+    padding: 0.5em 2em;
+    background-color: white;
+    color: black;
+    font-size: 0.75em;
+    border-radius: 0.5em;
+    text-align: left;
+    min-width: max-content
+}
+
+.chatMessageBox>* {
+    opacity: 0.25;
+}
+
+.chatTypingMessage {
+    font-size: 0.75em;
+    text-align: left;
+    display: flex;
+    gap: 0.25em;
+    margin-top: 0.25em;
+}
+
+#chatTypingMessageContents {
+    font-size: 1em;
+}
+
+.chatTypingDots {
+    width: max-content;
+    display: flex;
+    padding-top: 0.25em;
+    gap: 0.25em;
+}
+
+.chatTypingDots>* {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: white;
+    animation: typingDotGrow 1s ease calc(1s * var(--i)/3) infinite;
+}
+
+@keyframes typingDotGrow {
+    0% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    40% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    60% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+.chatMessages {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    transition: all 0.2s ease;
+}
+
+.chatMessage {
+    text-align: left;
+    display: flex;
+    gap: 0.5em;
+}
+
+.chatMessageTime {
+    font-size: 0.75em;
+    margin-left: 0.5em;
+    opacity: 0.75;
+}
+
+.chatMessageContent {
+    font-size: 0.75em;
+}
+
+.chatProfilePic {
+    min-width: 3em;
+    height: 3em;
+    background: var(--profile-img);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.chatMessagesContainer {
+    overflow: hidden;
+}
+
+.chatMessagesSlide {
+    animation: chatMessageSlide 0.4s ease;
+}
+
+@keyframes chatMessageSlide {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(calc(-100% / 3 - 0.25em));
+    }
+}
+
+.chatMessageAppear {
+    animation: messageAppear 0.2s ease;
+}
+
+@keyframes messageAppear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blur {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
