@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Formatter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Article Formatter</h1>
+
+        <!-- Article Text Field -->
+        <textarea id="articleText" placeholder="Insert article text here..." required></textarea><br>
+        <p id="articleTextMessage" class="error-message">Enter article text here.</p>
+
+        <!-- Source Info Toggle -->
+        <label class="source-option"><input type="checkbox" id="toggleSource" onchange="toggleSourceFields()">
+            Enter Source Info</label>
+        <div id="sourceFields">
+            <input type="text" id="sourceName" placeholder="Source Name"><br>
+            <input type="text" id="sourceLink" placeholder="Source Link"><br>
+            <p id="sourceMessage" class="error-message">Enter source name here capitalized.</p>
+        </div>
+
+        <!-- Ping Roles Toggle -->
+        <label class="source-option"><input type="checkbox" id="toggleRoles" onchange="toggleRoleFields()"> Choose Ping
+            Roles</label>
+        <div id="roleFields">
+            <label class="role-option"><input type="checkbox" name="role" value="<@&1212669336855126106>">
+                News</label><br>
+            <label class="role-option"><input type="checkbox" name="role" value="<@&1295694021695635587>"> Chaotic
+                Theorists</label><br>
+            <label class="role-option"><input type="checkbox" name="role" value="<@&1295694111428444240>"> Rebirth
+                Hype</label><br>
+            <label class="role-option"><input type="checkbox" name="role" value="<@&919971197247180830>">
+                Announcements</label>
+            <p id="pingRolesMessage" class="error-message">Choose Ping role.</p>
+        </div>
+
+        <!-- Copy Button -->
+        <button id="copyButton" onclick="copyToClipboard()">Copy to Clipboard</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

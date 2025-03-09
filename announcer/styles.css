@@ -1,0 +1,119 @@
+/* body {
+    background-color: #143432;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    background: #1E1E1E;
+    color: white;
+    border: 1px solid #5960ED;
+    resize: none;
+}
+
+input,
+button {
+    margin: 10px;
+    padding: 10px;
+    background: #1E1E1E;
+    color: white;
+    border: 1px solid #5960ED;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.role-option,
+.source-option {
+    display: block;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+} */
+
+#sourceFields,
+#roleFields {
+    display: none;
+    text-align: left;
+    width: 80%;
+}
+
+body {
+    background-color: #143432;
+    color: white;
+    font-family: monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    width: 250px;
+    height: 50px;
+    resize: none;
+    background-color: inherit;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+input {
+    background-color: inherit;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+    color: white;
+}
+
+#sourceFields {
+    width: 155px;
+}
+
+#roleFields {
+    width: 200px;
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: white
+}
+
+button {
+    background-color: #A2FFDE;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: monospace;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+    /* Hide by default */
+}
